@@ -157,3 +157,9 @@ h1.minus {
 .list li:hover .delete-btn {
   opacity: 1;
 }
+
+.no-items {
+  color: grey;
+  text-align-last: center;
+  font-style: italic;
+}
