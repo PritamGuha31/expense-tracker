@@ -1,11 +1,11 @@
 import React, {useState, useContext} from "react";
-import { GlobalContext } from '../context/GlobalState';  
+import { GlobalContext } from '../context/GlobalState';
 
 export const AddTransactionForm = () => {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
     
-    const {addTransaction} = useContext(GlobalContext); 
+    const {dispatch} = useContext(GlobalContext); 
 
     const onSubmit = e => {
         e.preventDefault();
@@ -14,7 +14,12 @@ export const AddTransactionForm = () => {
             text,
             amount: parseInt(amount)
         };
-        addTransaction(newTransaction);
+        dispatch({
+            type: 'ADD_TRANSACTION',
+            payload: newTransaction
+        })
+        setText('');
+        setAmount(0);
     }
 
     return (
