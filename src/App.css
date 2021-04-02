@@ -78,7 +78,8 @@ label {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+select {
   border: 1px solid #dedede;
   border-radius: 2px;
   display: block;
@@ -162,4 +163,18 @@ h1.minus {
   color: grey;
   text-align-last: center;
   font-style: italic;
+}
+
+.grey {
+  color: grey;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px !important;
+}
+
+.hidden {
+  display: none;
 }
